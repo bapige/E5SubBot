@@ -97,7 +97,7 @@ chmod +x E5SubBot
 下载源码，安装GO环境
 
 ```shell
-git clone https://github.com/iyear/E5SubBot.git && cd E5SubBot && go build
+git clone https://github.com/bapige/E5SubBot.git && cd E5SubBot && go build
 ```
 
 ## 部署配置
