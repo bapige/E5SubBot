@@ -101,7 +101,7 @@ chmod +x E5SubBot
 Download the source code and install the GO environment
 
 ```shell
-git clone https://github.com/iyear/E5SubBot.git && cd E5SubBot && go build
+git clone https://github.com/bapige/E5SubBot.git && cd E5SubBot && go build
 ```
 
 ## Configuration
