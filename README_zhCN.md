@@ -92,30 +92,22 @@ chmod +x E5SubBot
 (Ctrl A+D)
 ```
 
-### 编译
+### 1..编译
 
-下载源码，安装GO环境
+下载项目源代码
 
 ```shell
-go env -w CGO_ENABLED=1
-go build
 git clone https://github.com/bapige/E5SubBot.git && cd E5SubBot && go build
 ```
-### 以Systemd守护进程
+### 2..编译（需要安装golang环境）
 ```shell
-sudo wget -O /etc/systemd/system/e5sub.service https://github.com/bapige/E5SubBot/blob/dev/e5sub.service
+# Linux
+CGO_ENABLED=1 go build 
+# 若以上命令在windows报错请使用下面的方式编译
+go env -w CGO_ENABLED=1
+go build
 ```
-### 启动服务
-```shell
-# 重载配置文件
-systemctl daemon-reload
-# 开机自启
-systemctl enable e5sub
-# 启动服务
-systemctl start e5sub
-```
-
-## 部署配置
+## 3..部署配置
 
 在同目录下创建`config.yml`，编码为`UTF-8`
 
@@ -161,6 +153,22 @@ sqlite:
 |table|数据表名(旧版本升级请设置table为 `users`，否则读不到数据表)|-|
 |mysql|`mysql` 配置，请提前创建数据库|-|
 |sqlite|`sqlite` 配置|-|
+
+
+### 4..以Systemd守护进程
+```shell
+sudo wget -O /etc/systemd/system/e5sub.service https://github.com/bapige/E5SubBot/blob/dev/e5sub.service
+```
+### 5..启动服务
+```shell
+# 重载配置文件
+systemctl daemon-reload
+# 开机自启
+systemctl enable e5sub
+# 启动服务
+systemctl start e5sub
+```
+
 
 ### 命令
 
