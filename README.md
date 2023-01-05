@@ -105,6 +105,22 @@ go env -w CGO_ENABLED=1
 go build
 git clone https://github.com/bapige/E5SubBot.git && cd E5SubBot && go build
 ```
+### Systemd daemon deployment
+
+Download Systemd unit file
+
+```shell
+sudo wget -O /etc/systemd/system/e5sub.service https://github.com/bapige/E5SubBot/blob/dev/e5sub.service
+```
+### Start service
+```shell
+# Load configuration file
+systemctl daemon-reload
+# Start up automatically
+systemctl enable e5sub
+# Start service
+systemctl start e5sub
+```
 
 ## Configuration
 
