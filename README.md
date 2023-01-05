@@ -16,7 +16,7 @@
 ![](https://img.shields.io/docker/v/iyear/e5subbot?label=docker%20tag&style=flat-square)
 ![](https://img.shields.io/docker/image-size/iyear/e5subbot?style=flat-square&label=docker%20image%20size)
 
-English | [简体中文](https://github.com/iyear/E5SubBot/blob/master/README_zhCN.md) | [Telegram Chat](https://t.me/e5subbot)
+English | [简体中文](https://github.com/bapige/E5SubBot/blob/dev/README_zhCN.md) | [Telegram Chat](https://t.me/e5subbot)
 
 DEMO: https://t.me/E5Sub_bot
 
