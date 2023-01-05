@@ -79,7 +79,7 @@ docker cp e5sub:/config.yml .
 
 ### 二进制文件
 
-在 [Releases](https://github.com/iyear/E5SubBot/releases) 页面下载对应系统的二进制文件，上传至服务器
+在 [Releases](https://github.com/bapige/E5SubBot/releases) 页面下载对应系统的二进制文件，上传至服务器
 
 Windows: 启动 `E5SubBot.exe`
 
@@ -97,7 +97,22 @@ chmod +x E5SubBot
 下载源码，安装GO环境
 
 ```shell
+go env -w CGO_ENABLED=1
+go build
 git clone https://github.com/bapige/E5SubBot.git && cd E5SubBot && go build
+```
+### 以Systemd守护进程
+```shell
+sudo wget -O /etc/systemd/system/e5sub.service https://github.com/bapige/E5SubBot/blob/dev/e5sub.service
+```
+### 启动服务
+```shell
+# 重载配置文件
+systemctl daemon-reload
+# 开机自启
+systemctl enable e5sub
+# 启动服务
+systemctl start e5sub
 ```
 
 ## 部署配置
